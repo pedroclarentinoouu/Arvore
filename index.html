@@ -395,31 +395,34 @@ Ao conhecermos o verdadeiro sentido da vida, segundo a Palavra de Deus, essa dec
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
   import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-  const firebaseConfig = {
-        apiKey: "AIzaSyD_s5E6ZqwHGwZ3i3J9qXZc2E1_CiTJtNM",
+  async function main() {
+    const firebaseConfig = {
+      apiKey: "AIzaSyD_s5E6ZqwHGwZ3i3J9qXZc2E1_CiTJtNM",
         authDomain: "meu-novo-projeto-5d076.firebaseapp.com",
         projectId: "meu-novo-projeto-5d076",
         storageBucket: "meu-novo-projeto-5d076.firebasestorage.app",
         messagingSenderId: "626918880177",
         appId: "1:626918880177:web:c745153a2a063bc7b38390",
         measurementId: "G-FZ5SVFG08Q"
-  };
+    };
 
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const db = getFirestore(app);
+    const app = initializeApp(firebaseConfig);
+    getAnalytics(app);
+    const db = getFirestore(app);
 
-  // Esta função será chamada ao carregar o site
-  try {
-    await addDoc(collection(db, "acessos"), {
-      timestamp: new Date().toISOString(),
-      page: window.location.pathname,
-      userAgent: navigator.userAgent
-    });
-    console.log("Acesso registrado com sucesso!");
-  } catch (e) {
-    console.error("Erro ao registrar acesso:", e);
+    try {
+      await addDoc(collection(db, "acessos"), {
+        timestamp: new Date().toISOString(),
+        page: window.location.pathname,
+        userAgent: navigator.userAgent
+      });
+      console.log("Acesso registrado com sucesso!");
+    } catch (e) {
+      console.error("Erro ao registrar acesso:", e);
+    }
   }
+
+  main();
 </script>
 
 </body>
