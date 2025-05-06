@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .principal{
+            width: 100%;
+            height: auto;
+          /* border: solid 2px red;*/
+        }
+        .row-1{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         /*border: solid 2px green;*/
+          width: 100%;                         /*Pode estar causando zoom na tela*/
+          height: 40px;
+          position: fixed;
+        }
+        .col{
+            color: rgb(170, 70, 7);
+            background: rgba(255, 255, 255, 0.2); /* fundo branco transparente */
+            backdrop-filter: blur(10px);          /* embaça o que está atrás */
+            -webkit-backdrop-filter: blur(10px);  /* compatibilidade com Safari */
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* borda leve */
+            padding-left: 7px;
+            padding-right: 7px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            font-family:'Courier New', Courier, monospace;
+        }
+        /*.click :hover{
+            color: #d16f13;
+        }*/
+
+        .imagem{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .mensagem{
+            display: none; 
+            background: #eee; 
+            width: auto; 
+            height: auto; 
+            /*border: solid 2px red;*/
+            padding: 5px;
+        }
+        .centralizarMensagem{
+            width: auto;
+            height: auto;
+           /* border: solid 2px blue;*/
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .perguntas :hover{
+            color: rgb(170, 70, 7);
+        }
+        .perguntas{
+            width: 300px;
+           color: rgb(0, 0, 238);
+           /* border: solid 2px green;*/
+        }
+        .h1Titulo3{
+            color: rgb(82, 87, 88);
+            margin-left: 40px;
+        }
+        .hr3Titulo{
+            width: 98%;
+        }
+        .Text{
+           /* border: solid 2px green;*/
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+        }
+        .text{
+           /* border: solid 2px rgb(11, 25, 226);*/
+            width: 32.5%;
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+        .Text {
+         flex-direction: column;
+         align-items: center;
+         }
+         .text {
+         width: 90%; 
+        }}
+        .exiacao-de-cristo{
+         width: 47%;
+         height: 140px;
+         max-width: 100%;
+         display: block;
+        /* border: solid 2px red;*/
+        }
+        .posicionarImagem{
+            width: auto;
+            height: auto;             /*configura o tamanho da imagem*/
+           /* border: solid 2px rgb(189, 26, 204);*/
+            text-align: end;
+            display: flex;
+            padding-left: 32%;
+        }
+        .ajustarText2{
+            display: flex;
+            gap: 20px;
+            padding: 17px;
+        }
+        .JesusEmSeuTrono{
+            width: 400px;
+            height: 400px;
+          /*  border: solid 2px red;*/
+        }
+        @media (max-width: 768px) {
+        .ajustarText2 {
+         flex-direction: column;
+         align-items: center;
+         }
+         .JesusEmSeuTrono{
+         width: 90%; 
+        }}
+        .mensagem1{
+            position: fixed;
+           /* border: solid 2px red;*/
+           display: none;
+        }
+        .fimcl1{
+            width: 49%;
+            height: auto;
+           /* border: solid 2px red;*/
+            text-align: center;
+            color: white;
+        }
+        .fimcl2{
+            width: 49%;
+            height: auto;
+            /*border: solid 2px green;*/
+            text-align: center;
+            color: white;
+        }
+        .fi{
+            width: 100%;
+            height: auto;
+           /* border: solid 2px red;*/
+            display: flex;
+            justify-content: center;
+            background-color: #24262ba6;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="row-1">
+            <div class="col">
+                <h3 class="click"><p onclick="func">O Corpo da Vida</p></h3>
+
+                <div id="um" class="mensagem1" >
+                   <!--<h4>teste</h4>-->
+                  </div>
+                  
+            </div> <!--col-->
+        </div>  <!--row-1-->
+
+        <img src="O corpo Da vida (3).png" alt="" class="imagem">
+
+        <div class="perguntas">
+            <h5><p onclick="mostrarDiv()">|&nbsp Principais perguntas a cerca de Deus</p>
+
+            </h5>
+        </div><!--perguntas-->
+
+        <!--<h1>"Muitas pessoas se perguntam qual é o sentido da vida.
+Algumas acabam se afastando de Cristo e da Igreja por ainda não compreenderem o propósito que Deus tem para suas vidas.
+Ao conhecermos o verdadeiro sentido da vida, segundo a Palavra de Deus, essa decisão se torna muito mais clara.
+"-->
+        </h1>
+        
+
+          <div class="centralizarMensagem">
+          <div id="mensagem" class="mensagem">
+            <strong>Por que Deus passa a imagem de um Deus não presente se foi Ele mesmo o Criador?</strong><br>
+            - O pecado foi a causa da separação de Deus, pois antes disso, Deus já havia julgado a maldade, assim como nos julgou. 
+            Temos pouca culpa da separação, Deus ainda pode nos dar salvação.<br>
+
+            <strong>Por que Deus criou o mal?</strong><br>
+            - Tudo o que sai da boca de Deus é verdadeiro, e se concretiza por meio de Sua perfeita justiça, segundo as obras alheias.<br>
+
+            <strong>Como Deus criou o mundo?</strong><br>
+            - E Deus falou: "Não há ninguém maior que Deus". E tudo o que existe hoje naturalmente existe para testificar Sua palavra. 
+            Assim, também todas as coisas existem. A palavra de Deus é infinita e atemporal: 1 dia é mil anos, e mil anos é um dia. 
+            Assim como a grandeza do espaço é infinita, o minúsculo também é. A terra é mais antiga que a criação dos 7 dias, 
+            sem forma, repleta de água desde a criação do universo.<br>
+
+            <strong>Por que não há provas claras e diretas acerca da existência de Deus?</strong><br>
+            - O sobrenatural faz parte da consciência divina. Deveríamos esperar o tempo certo para aprender. 
+            Não nos compete pedir ajuda ou poder para Sua compreensão. Deus se oculta dos que O procuram por meio de desvios.<br>
+
+            <strong>Por que herdamos o pecado?</strong><br>
+            - Por causa da decisão da mulher em conhecer o mal, Deus se afastou dentre eles; por causa de ela ter dado o fruto para o homem comer,
+             ficou grávida, e o fruto foi passado para seus descendentes, que não conheciam a Deus. Isso colabora para que todos nós possamos ter a nossa
+             chance de conhecer novamente a Deus.
+        </div><!--mensagem-->
+    </div><!--centralizarMensagem-->
+    <br>
+    <p>
+        <h1 class="h1Titulo3">O Jardim da Vida</h1><h5 class="h1Titulo3">Uma parábola moderna inspirada no Gênesis</h5><hr class="hr3Titulo">
+    </p>
+    <div class="Text">
+
+        <div class="text" style="background-color: #fdf6e3;">
+            
+            <div class="posicionarImagem">
+                
+                <img src="exiação-de-cristo-1.jpg" alt="" class="exiacao-de-cristo"></div><!--posicionarImagem-->
+                <h4>
+                    Certo dia em um antigo jardim uma moça passeava, de árvore em árvore, folha em folha, rio em rio. E sentia o cheiro 
+                    do lugar, a aparência velha e quebradiça das árvores e galhos de árvores. Ela sempre se perguntava:<br> 
+                    -Por que este jardim é tão feio? E por que o dono não se importa de cuidar e vem aguar as pobres plantinhas que estão murchas?
+
+                </h4>
+                <h4>
+                    Um pobre carpinteiro que andava por ali escutou, e lhe respondeu:<br> 
+                    - Eu sei da história deste antigo jardim, ele era muito lindo, com árvores frutíferas e todo tipo de animal que possa imaginar. 
+                    O dono, todo fim de tarde, passeava pelo jardim e o regava com a água mais limpa e mais pura, para que pudessem viver e dar bons frutos. 
+                    Mas certo dia veio alguém que não era do jardim e plantou, na parte lateral, uma árvore que produz um fruto muito doce, 
+                    e só ele possuía estas sementes. As pessoas comeram do fruto desta árvore e chamaram tantas outras, 
+                    até todo o espaço do jardim ser ocupado e não restasse mais espaço para o dono. 
+                    O dono do jardim espera até hoje, até que não restem mais sementes e nem pessoas que ainda não provaram do fruto, 
+                    para que seu jardim possa ficar novamente vazio e para que ele chame seus filhos e parentes para reconstruí-lo.
+
+    
+                </h4>
+        </div><!--text1-->
+        <div class="text" style="padding-top: 23px;background-color: #f4f4f4;
+">
+            <h4>
+                A moça, comovida com a história que o carpinteiro lhe havia contado, perguntou seu nome, e ele respondeu:<br> 
+                - Meu nome é Paz, e sou príncipe de outras terras<br> 
+                - Se chama Paz? E é príncipe?<br> 
+                - Sim — respondeu o carpinteiro<br> 
+                - E desta árvore seca e sem vida farei com que todo o jardim ganhe vida novamente em três dias apenas.<br> 
+                A moça percebeu que ele falava em parábolas, então resolveu ir com ele e descobrir todo o segredo por trás desta história.<br> 
+                - Como entenderei o que me fala, se me fala em parábolas? — perguntou a moça.<br> 
+                - Não falo em parábolas, falo minha própria língua, que também é a daqui. Te mostrarei coisas sobre o jardim. 
+                Mas meu espírito será como luz e te abrirá os olhos, revelando-lhe a verdade.<br> 
+                Assim, ele começou a revelar para a moça:<br> 
+                "Este jardim é onde você vive; as árvores dele: tronco e folhas são todas as pessoas que habitam nesta terra. 
+                Os frutos são as atitudes tomadas segundo seus pensamentos e palavras, maus ou bondosos. 
+                Cuidado com o que falam, pois suas palavras têm poderes para edificar ou levar à perdição."<br> 
+                A moça não entendia nada do que o carpinteiro falava, mas se o carpinteiro falasse na língua do jardim da moça, 
+                ela o impediria de realizar o que estava disposto a fazer, que era entrar no jardim e sacrificar sua vida propositalmente.
+                
+
+            </h4>
+        </div><!--text2-->
+        <div class="text"style="padding-top: 23px;background-color:#fdf6e3;">
+            <h4>O carpinteiro já dentro do jardim cortou um pedaço de uma árvore antiga, e com ela fez uma cruz. Chamou a moça e disse: faça o mesmo pois sou o maior exemplo. A árvore antiga
+                simbolizava o pecado e práticas que não agradam a Deus. O carpinteiro disse:<br>-você mulher que está vestida com folhas de figueiras, e produz figo verde e figo roxo adocicado
+                produza figos verdes para que mais pessoas tenham acesso a figos verdes, me ajude a carregar a cruz para fora do jardim e te darei novas vestes de Paz. Pois desta árvore velha que
+                injustamente foi removida deste jardim por mim levarei até meu pai que é justo e voltarei com minha árvore boa que produzem frutos da árvore da vida, pois atravéz da injustiça vocês terão misericordia
+                por mim.<br> Assim, a árvore da vida foi levada novamente ao jardim, e todos que experimentarem de seus frutos nunca mais terão fome ou sede e logo mais o Dono virá mesmo sem muitos ainda não entenderem
+                agora, quando todos decidirem em qual lado de qual árvore estarão plantando de suas sementes ele voltará.<br>
+                "Alimente-se de sua palavra e não sentirá mais fome, beba do arrependimento que te foi dado como fruto da videira e siga seus passos de uma árvore simples, não seja orgulhoso e acredite que esta árvore simples te salvou de sua morte"
+            </h4>
+            </h4>
+        </div><!--text3-->
+    </div>
+    <br><br>
+    <p>
+        <h1 class="h1Titulo3">O Sentido da Vida</h1><h5 class="h1Titulo3">Vivendo com propósito segundo a Escritura</h5><hr class="hr3Titulo">
+    </p>
+
+    <div class="ajustarText2">
+        <img src="jesusEmSeuTrono.jpg" alt="" class="JesusEmSeuTrono">
+
+        <div class="Text2-1">
+            <h4>
+                Deus é vida, por isso tudo o que Deus faz é para a vida e edifica. Um dos pilares para compreender quem é Deus é a Justiça, pois Deus é a justiça. 
+                Seja justo a ponto de amar a justiça quando você mesmo for corrigido por ela. Se guarda a justiça, olhará para o mundo e encontrará ela, 
+                verá que ela está presente em tudo, pois Deus possui justiça e criou tudo com ela. Verá que vivemos em tempos de aplicação da justiça e não em tempos de braços cruzados, para sim depois vivermos em tempos de paz, 
+                e que nada é por acaso.
+                &nbspAs dúvidas e problemas da humanidade a respeito da vida poderão ser respondidas, e não se queixará de mais nada. <br>
+                Podemos enxergar a justiça como um meio-termo: a quantidade que aumenta é a que abaixa, a que se perde é a que se acha. 
+                A justiça humana é limitada, ninguém tem o direito de julgar, pois ninguém nunca sabe de nada direito. 
+                Quem tem o direito de julgar é quem sabe de todas as coisas e quem é justo e correto. 
+                Da mesma forma que julgar, será julgado; com o juízo com que julgamos, seremos julgados.<br>
+                Mais valioso que ganhar muito ouro e riqueza, ao ponto de ser a pessoa mais rica que já existiu, é ganhar de Deus conhecimento, 
+                pois Deus nos dá seu conhecimento e sua sabedoria desde nosso início, quando todos mereciam afogar no pecado. 
+                Deus nos dá o escape de graça, pois Ele tem misericórdia, que pode ultrapassar a justiça, 
+                pois antes, para conhecer a verdade, era necessário encontrá-la por mérito.<br>
+                No princípio, com Deus estava a vida. Todo ser vivo que estava com Deus tinha sua marca; 
+                tudo o que faziam levava à vida eterna, levava à justiça, amor, misericórdia e tudo o que vinha de Deus e estava com Ele. 
+                Deus, fonte de toda sabedoria e conhecimento que existe, se comunica com seres que não possuem nem tanta sabedoria nem tanto conhecimento, 
+                mas dá para eles o discernimento correto da confiança, pois Deus também é a verdade. Assim é o céu.<br><br>
+                Tudo o que sai da boca de Deus é a verdade, vida, e tudo o que não existia passa a existir, 
+                e tudo o que antes não era possível passa a se tornar possível. Portanto, se a luta gera a morte, 
+                não digamos que os anjos lutam, ou que acabam com a vida dos outros, mas sim que utilizam da armadura celestial. 
+                A palavra de Deus é como uma espada afiada, a fé é como um escudo, a verdade é como um cinturão. 
+                Se Deus fala: "Não há e nem haverá ninguém maior que mim", podemos guerrear seguindo este pilar. 
+                "Pedi e receberei" é uma das maiores dádivas, pois podemos pedir qualquer coisa em oração e nos será concedido em justiça e em verdade. 
+                Até podemos pedir com orgulho, assim como Satanás, mas a palavra de Deus não vai contra ela mesma, 
+                e nossa resposta virá em forma de justiça.
+
+             </h4>
+        </div><!--Text2-1-->
+    </div><!--ajustarText2-->
+             <h4 style="padding: 15px;">
+                Houve guerra no céu, Satanás foi lançado no abismo, o qual era sem forma e vazio. Um novo pilar foi sancionado por Deus: 
+                "Aquele que, junto a mim, quiser ser maior, que antes seja o menor. Para morar junto a mim, que antes escolha a verdade, 
+                se antes não tiver orgulho; e aquele que quiser se assentar em meu trono, que seja digno e merecedor. Provarei que só eu sou"<br>
+                Assim, Deus criou a terra; com suas palavras Ele criou tudo, e tudo que é material também é palavra e justiça sem fim. 
+                A serpente sábia, criadora da mentira, engana os habitantes da terra: "Vocês serão como Deus" e terão o conhecimento do bem e do mal, 
+                serão grandes. A serpente, que antes era um querubim, conhece muitos segredos da criação de Deus, feitiços e magias terrenas. 
+                O fruto do conhecimento do mal foi dado à humanidade, e eles não estavam mais nus.<br>
+                Por causa da decisão da mulher em conhecer o mal, Deus se afastou dentre eles; 
+                por causa de ela ter dado o fruto para o homem comer, ficou grávida, e o fruto foi passado para seus descendentes, 
+                que não conheciam a Deus. Para quem nasce nu, a fé e a confiança tornaram-se uma escolha sincera. 
+                Deus foi misericordioso: de maior de todos, se fez o menor de todos os menores, o sacrifício santo. 
+                Ninguém jamais será como Ele, e nos chama para seguir seus passos simples, mansos e pacíficos, 
+                em meio à maldade, poder e riqueza, em troca de uma recompensa celestial justa, misericordiosa e bondosa.<br>
+                "Quem a si mesmo se exaltar será humilhado; e quem a si mesmo se humilhar será exaltado."<br>
+                Até hoje, Deus nos mostra seu exemplo de perfeição paterna, voltando em forma de um simples pãozinho. 
+                O que antes dizia: "Subirei ao céu, acima das estrelas de Deus exaltarei o meu trono, e no monte da congregação me assentarei, 
+                aos lados do norte. Subirei acima das mais altas nuvens e serei semelhante ao Altíssimo." está debilitado. 
+                E o que disse: "Mas vós não sereis assim; antes, o maior entre vós seja como o menor; e quem governa, como quem serve." 
+                Hoje está assentado à direita do Pai, e breve virá junto a Ele. 
+                Quem tiver a humildade de crer que Ele é o Rei, Deus Salvador, será salvo.<br>
+                Pense bem: você nunca será como Deus é, e nem foi — mas qual será sua hierarquia celestial se for o menor aqui?
+
+             </h4>
+             <hr>
+             <h4 style="padding: 15px;">
+                Nessa história, Deus é como o personagem principal que nos dá o maior exemplo até o dia de hoje. 
+                Por isso, toda vez que tiver a oportunidade de olhar para Deus, olhe com olhar de gratidão e temor. 
+                Deus pede adoração e nos dá a prova, assim como todas as coisas boas e ruins que existem são provas, 
+                para que nunca mais haja dúvidas ou perguntas a respeito de sua grande sabedoria e força.
+
+    
+            </h4>
+            <div class="fi">
+                <div class="fimcl1">
+                    <h4>
+                        <br>
+                        <p>Referencias: Gênesis 2:8-17, Isaías 9:6, Romanos 5:8, João 3:16, Gênesis 3:7, 
+                            João 15:1 <br> Hebreus 1:3, Mateus 7:1-2, Gálatas 3:24, Mateus 10:34, saías 14:12-15, 
+                            Marcos 9:35, Mateus 26:26-28, Atos dos | Apóstolos 1:9-11, Gênesis 1:2, João 3:8
+                        
+                        </p>
+                        | @pedro_dsc14 |
+                        <br><br>
+                    </h4>
+                </div>
+                <div class="fimcl2">
+                    <h4>
+                        <br><br>
+                        "Muitas pessoas se perguntam qual é o sentido da vida.<br>
+                         Algumas acabam se afastando de Cristo e da Igreja por ainda não compreenderem o propósito que Deus tem para suas vidas.<br>
+                         Ao conhecermos o verdadeiro sentido da vida, segundo a Palavra de Deus, essa decisão se torna muito mais clara."
+
+                        <br><br>
+                    </h4>
+                </div>
+            </div>
+    </div><!--principal-->
+    <script>
+        function mostrarDiv() {
+          var div = document.getElementById("mensagem");
+          if (div.style.display === "none") {
+            div.style.display = "block"; // mostra a div
+          } else {
+            div.style.display = "none"; // oculta de novo se já estiver visível
+          }
+        }
+        function func() {
+          var div = document.getElementById("um");
+          if (div.style.display === "none") {
+            div.style.display = "block"; // mostra a div
+          } else {
+            div.style.display = "none"; // oculta de novo se já estiver visível
+          }
+        }
+      </script>
+      
+</body>
+</html>
