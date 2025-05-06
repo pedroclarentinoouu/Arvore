@@ -412,9 +412,15 @@ Ao conhecermos o verdadeiro sentido da vida, segundo a Palavra de Deus, essa dec
 
     try {
       await addDoc(collection(db, "acessos"), {
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString(), // UTC
+        dataLocal: new Date().toLocaleDateString(), // ex: 06/05/2025
+        horaLocal: new Date().toLocaleTimeString(), // ex: 10:42:13
         page: window.location.pathname,
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent,
+        idioma: navigator.language,
+        plataforma: navigator.platform,
+        larguraTela: window.screen.width,
+        alturaTela: window.screen.height
       });
       console.log("Acesso registrado com sucesso!");
     } catch (e) {
